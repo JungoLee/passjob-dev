@@ -21,6 +21,7 @@
   <body>
     <div id="wrap">
       <!-- s: header include-->
+      <!-- 20240312 -->
       <header id="header">
         <ul class="skipnav">
           <li>
@@ -58,12 +59,85 @@
         <div class="header-bt">
           <a href="#none">
             <img src="../assets/images/logo.png" alt="site_logo" />
-            <div class="navbar">
+            <div class="navbar" id="navbar-toggle">
               <img src="../assets/images/navbar.png" alt="navbutton" />
             </div>
           </a>
         </div>
+        <!-- 20240312 네비 드롭다운 메뉴 & 스크립트  -->
+        <div class="nav-menu">
+          <ul class="menu-list">
+            <li>
+              <span class="dropdown-toggle">
+                교육원소개
+                <i class="dropdown-icon"></i>
+              </span>
+              <ul class="dropdown-menu">
+                <li><a href="#none">브랜드 소개</a></li>
+                <li><a href="#none">강사진 소개</a></li>
+                <li><a class="bt-none" href="#none">교육 환경</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="dropdown-toggle">
+                자소서 전문과정
+                <i class="dropdown-icon"></i>
+              </span>
+              <ul class="dropdown-menu">
+                <li><a href="#none">자기소개서 첨삭</a></li>
+                <li><a class="bt-none" href="#none">자기소개서 올인원</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="dropdown-toggle">
+                면접 전문과정
+                <i class="dropdown-icon"></i>
+              </span>
+              <ul class="dropdown-menu">
+                <li><a href="#none">대기업 1:1 면접</a></li>
+                <li><a href="#none">공기업 1:1 면접</a></li>
+                <li><a href="#none">금융권 1:1 면접</a></li>
+                <li><a href="#none">공무원 1:1 면접</a></li>
+                <li><a class="bt-none" href="#none">대학원 1:1 면접</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="dropdown-toggle">
+                외부/단체교육
+                <i class="dropdown-icon"></i>
+              </span>
+              <ul class="dropdown-menu">
+                <li><a href="#none">학교강연</a></li>
+                <li><a href="#none">기업강연</a></li>
+                <li><a class="bt-none" href="#none">강연신청</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="dropdown-toggle">
+                커뮤니티
+                <i class="dropdown-icon"></i>
+              </span>
+              <ul class="dropdown-menu">
+                <li><a href="#none">고객센터</a></li>
+                <li><a href="#none">자주하는질문</a></li>
+                <li><a href="#none">수강후기</a></li>
+                <li><a class="bt-none" href="#none">강사채용</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="dropdown-toggle">
+                <b>상담신청</b>
+                <i class="dropdown-icon"></i>
+              </span>
+              <ul class="dropdown-menu">
+                <li><a class="bt-none" href="#none">빠른상담신청</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- //20240312 네비 메뉴 & 스크립트  -->
       </header>
+      <!-- //20240312 -->
       <!-- e: header include-->
 
       <div class="pageClassMain PJ_PG03_002" id="container">
@@ -192,36 +266,45 @@
                 </div>
                 <div class="checkbox">
                   <input type="checkbox" id="consult03" />
-                  <label for="consult03">
-                    개인정보 수집 및 이용 동의 [내용보기]
-                  </label>
+                  <label for="consult03">개인정보 수집 및 이용 동의</label>
+                  <!-- 20240311 : 내용 버튼 & 팝업 추가 -->
+                  [내용보기]
+                  <!-- //20240311 : 내용 버튼 & 팝업 추가 -->
                 </div>
                 <div class="checkbox">
                   <input type="checkbox" id="consult04" />
-                  <label for="consult04">
-                    마케팅 및 광고에 활용 [내용보기]
-                  </label>
+                  <label for="consult04">마케팅 및 광고에 활용</label>
+                  <!-- 20240311 : 내용 버튼 & 팝업 추가 -->
+                  [내용보기]
+                  <!-- //20240311 : 내용 버튼 & 팝업 추가 -->
                 </div>
                 <button class="consult-btn" type="button">신청하기 ▶</button>
               </form>
             </div>
           </section>
-          <div class="ico-triangle-right-sample01"></div>
         </div>
       </div>
 
       <!-- s: footer include-->
+      <!-- 20240312 -->
       <footer id="footer">
         <div class="footer-content">
+          <!-- 20240312 푸터 팝업 & 스크립트 -->
           <div class="footer-top">
-            개인정보 수집/이용동의
-            <i>이메일무단수집거부</i>
+            <ul>
+              <li id="privaty_open"><b>개인정보처리방침</b></li>
+              <li id="email_open">이메일무단수집거부</li>
+              <li id="refund_open">환불규정안내</li>
+            </ul>
           </div>
+          <!-- //20240312 푸터 팝업 & 스크립트  -->
           <div class="footer-middle">
             <span>
               개인정보보호 책임자 : 하미나 / 사업자등록번호 : 375-88-02759
             </span>
-            <span>통신판매신고번호:제 2024-서울중구-0303호</span>
+            <span>
+              <a href="#none">통신판매신고번호:제 2024-서울중구-0303호</a>
+            </span>
             <span>
               도로명주소 : [04513] 서울특별시 중구 서소문로 116 유원빌딩 15F
               취업패스
@@ -259,7 +342,225 @@
             </ul>
           </div>
         </div>
+        <!-- 20240312 푸터 팝업 추가 -->
+        <div id="privaty_info" class="popup">
+          <div class="popup-wrap">
+            <h2>개인정보처리방침</h2>
+            <p>
+              1. 개인정보의 수집 목적
+              <br />
+              - 회원 이름, 회원 연락처, 이메일, 학력, 거주지 등 맞춤 서비스
+              제공을 위한 각종 고지 및 통지 목적으로 개인정보를 처리합니다.
+              <br />
+              <br />
+              2. 수집하는 개인정보의 항목
+              <br />
+              - 필수 : 이름(성함), 연락처, 이메일
+              <br />
+              - 선택 : 희망교육, 희망분야, 코칭방식, 문의내용
+              <br />
+              ※ 인터넷 서비스 이용과정에서 아래 개인정보 항목이 자동으로
+              생성되어 수집될 수 있습니다.
+              <br />
+              ( IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록 등 )
+              <br />
+              <br />
+              3. 보유 이용기간
+              <br />
+              - 회원 수료 및 환불 시
+              <br />
+              - 재화/서비스 공급 완료 및 요금 결제/정산 완료 시
+              <br />
+              - 다만, 다음의 사유에 해당하는 경우에는 해당 기간 종료 시까지
+              <br />
+              ① 관계 법령 위반에 따른 수사/조사 등이 진행 중인 경우에는 해당
+              수사/조사 종료 시까지
+              <br />
+              ② 「전자상거래 등에서의 소비자 보호에 관한 법률」 에 따른
+              표시/광고, 계약 내용 및 이행 등 거래에 관한 기록
+              <br />
+              - 표시/광고에 관한 기록 : 6개월
+              <br />
+              - 계약 또는 청약철회, 대금결제, 재화 등의 공급기록 : 5년
+              <br />
+              - 소비자 불만 또는 분쟁처리에 관한 기록 : 3년
+              <br />
+              ③ 「통신비밀보호법」 에 따른 통신 사실 확인자료 보관
+              <br />
+              - 가입자 전기통신일시, 개시/종료시간, 상대방 가입자번호, 사용도수,
+              발신기지국 위치추적자료 : 1년
+              <br />
+              - 컴퓨터통신, 인터넷 로그기록 자료, 접속지 추적자료 : 3개월
+              <br />
+              <br />
+              4. 개인정보 제공 동의 거부 권리 및 동의 거부에 따른 불이익
+              <br />
+              귀하는 개인 정보 제공 동의를 거부 할 권리가 있으며, 거절하신
+              경우에는 서비스의 제공이 제한 될 수 있습니다.
+              <br />
+              위 보유기간에도 불구하고 계속 보유하여야 할 필요가 있을 경우에는
+              귀하의 동의를 받습니다.
+            </p>
+            <div class="close-btn">확인</div>
+          </div>
+        </div>
+        <div id="email_info" class="popup">
+          <div class="popup-wrap">
+            <h2>이메일무단수집거부</h2>
+            <p>
+              취업패스에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의
+              기술적 장치를 이용하여 무단으로 수집되는 것을 거부합니다.
+              <br />
+              또한 이를 위반시 「정보통신망 이용 촉진 및 정보보호 등에 관한
+              법률」 제 50조의 2규정에 의하여 형사처벌될 수 있음을 유념하시기
+              바랍니다.
+              <br />
+              <br />
+              정보통신망법 제50조의 2규정(전자 우편 주소의 무단 수집행위 등
+              금지)
+              <br />
+              ① 누구든지 전자 우편 주소의 수집을 거부하는 의사가 명시된 인터넷
+              홈페이지에서 자동으로 전자 우편 주소를 수집하는 프로그램 그 밖의
+              기술적 장치를 이용하여
+              <br />
+              &nbsp;&emsp;전자 우편 주소를 수집하여서는 아니된다.
+              <br />
+              ② 누구든지 제1항의 규정을 위반하여 수집된 전자 우편 주소를
+              판매/유통하여서는 아니된다.
+              <br />
+              ③ 누구든지 제1항 및 제2항의 규정에 의하여 수집/판매 및 유통이
+              금지된 전자 우편 주소임을 알고 이를 정보전송에 이용하여서는
+              아니된다.
+              <br />
+            </p>
+            <div class="close-btn">확인</div>
+          </div>
+        </div>
+        <div id="refund_info" class="popup">
+          <div class="popup-wrap">
+            <h2>환불규정안내</h2>
+            <div class="desc">
+              취업패스는 아래와 같은 내용으로 학습비 반환 절차를 공지 드립니다.
+              <br />
+              <br />
+              * 교습비(학습비) 등의 산정기준
+              <br />
+              교습비(학습비) 등이란 학습자가 학원에 교습이나 학습 장소 이용의
+              대가로 납부하는 수강료/이용료 또는 교습비(학습비) 등(이하
+              '교습비'라 함)과 그 외의 추가로 납부하는 모든 경비(이하 '기타
+              경비'라 함)를 말합니다.
+              <br />
+              <br />
+              * 교습비(학습비) 등의 반환기준
+              <br />
+              ① 학습자가 감염병에 감염 또는 감염된 것으로 의심되거나 감염될
+              우려가 있는 학습자가 격리된 경우
+              <br />
+              ② 학원의 설립/운영자가 교습을 할 수 없거나 학습 장소를 제공할 수
+              없게 된 경우
+              <br />
+              ③ 학습자가 본인의 의사로 수강을 포기한 경우
+              <br />
+              <br />
+              * 교습비(학습비) 반환 원인 및 기준을 세분화하며 다음과 같습니다.
+              <br />
+              ※ 학습자 반환기준 [관련근거 : 평생교육법 시행령 제 23조 제2항
+              관련]
+              <br />
+              <br />
+              <table class="popup_table">
+                <colgroup>
+                  <col style="width: 10%" />
+                  <col style="width: 15%" />
+                  <col style="width: 25%" />
+                  <col style="width: *" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="2">구분</th>
+                    <th>반환사유 발생일</th>
+                    <th>반환금액</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="2">
+                      1. 법 제28조 제4항 제1호 및 제2호에따른 반환사유의 경우
+                    </td>
+                    <td>
+                      수업을 할 수 없거나,
+                      <br />
+                      수업장소를 제공할 수 없게 된 날
+                    </td>
+                    <td>이미 낸 학습비를 일 단위로 계산한 금액</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6">
+                      2. 법 제28조 제4항 제3호에따른 반환사유의 경우
+                    </td>
+                    <td rowspan="4">가. 학습비 징수기간이 1개월 이내인 경우</td>
+                    <td>1&#41; 수업시작 전</td>
+                    <td>이미 낸 학습비 전액</td>
+                  </tr>
+                  <tr>
+                    <td>2&#41; 총수업시간의 1/3이 지나기 이전</td>
+                    <td>이미 낸 학습비의 2/3에 해당하는 금액</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      3&#41; 총수업시간의 1/3이 지난 후부터
+                      <br />
+                      1/2이 지나기 이전까지
+                    </td>
+                    <td>이미 낸 학습비의 1/2에 해당하는 금액</td>
+                  </tr>
+                  <tr>
+                    <td>4&#41; 총수업시간의 1/2이 지난 후</td>
+                    <td>반환하지 아니함</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">
+                      나. 학습비 징수기간이 1개월을 초과하는 경우
+                    </td>
+                    <td>1&#41; 수업시작 전</td>
+                    <td>이미 낸 학습비 전액</td>
+                  </tr>
+                  <tr>
+                    <td>2&#41; 수업시작이후</td>
+                    <td>
+                      반환사유가 발생한 그 달의 반환 대상 학습비(가목에 따라
+                      산출된 반환대상학습비를 말한다)와 나머지 달의 학습비
+                      전액을 합산한 금액
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              * 반환 기준일
+              <br />
+              - 수업개시이전 : 수강료 반환 청구서를 작성하여 제출한 당일
+              <br />
+              - 수업개시이후 : 수강료 반환 청구서를 작성하여 제출한 익일부터
+              적용
+              <br />
+              <br />
+              * 학습비 환불기한 : 환불 기준일로부터 5일 이내에 학습자 개별
+              계좌로 입금됩니다.
+              <br />
+              * 할인 받은 과정은 할인된 금액으로 반환처리 됩니다.
+              <br />
+              * 당일 수업 교습비(학습비) 반환의 경우, 일정변경 및 취소를
+              포함하여 컨설팅 시작 시간 이후에는 상황에 따라 불가할 수 있으니,
+              <br />
+              교습비 반환을 희망하실 경우 최소 하루 전에는 담당자에게
+              말씀해주시길 바랍니다.
+            </div>
+            <div class="close-btn">확인</div>
+          </div>
+        </div>
+        <!-- //20240312 푸터 팝업 추가 -->
       </footer>
+      <!-- //20240312 -->
       <!-- e: footer include-->
     </div>
     <div class="dimm"></div>

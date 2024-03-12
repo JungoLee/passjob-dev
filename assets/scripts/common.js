@@ -58,10 +58,6 @@ window.addEventListener("load", function () {
     callback(param) {},
   });
 
-  if (document.querySelector(".mySwiper")) {
-    const swiper = new Swiper(document.querySelector(".mySwiper"));
-    console.log(swiper);
-  }
   if (document.querySelector(".swiper01")) {
     var swiper01 = new Swiper(".swiper01", {
       autoplay: {
@@ -76,36 +72,133 @@ window.addEventListener("load", function () {
       direction: "vertical",
       loop: true,
       autoplay: {
-        delay: 1000,
+        delay: 0,
         disableOnInteraction: false,
       },
+      allowTouchMove: false,
       slidesPerView: "auto", // 자동으로 슬라이드 뷰 설정
-      speed: 1000, // 슬라이드 속도 조정
+      speed: 2000, // 슬라이드 속도 조정
     });
   }
-  if (document.querySelector(".swiper03")) {
-    var swiper03 = new Swiper(".swiper03", {
+  if (document.querySelector(".coach-swiper-container")) {
+    var swiper03 = new Swiper(".coach-swiper-container", {
       scrollbar: {
-        el: ".swiper-scrollbar",
+        el: ".coach-swiper-container .swiper-scrollbar",
         hide: false,
       },
       slidesPerView: 1.2,
       spaceBetween: 17,
     });
   }
-  if (document.querySelector(".swiper04")) {
-    var swiper04 = new Swiper(".swiper04", {
-      direction: "vertical",
-      loop: true,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-      },
-      speed: 2000,
-      slidesPerView: 3,
-      loopAdditionalSlides: 1,
+  if (document.querySelector(".PJ_PG01_001 .swiper04")) {
+    document.querySelectorAll(".PJ_PG01_001 .swiper04").forEach(($this) => {
+      var swiper04 = new Swiper($this, {
+        direction: "vertical",
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        allowTouchMove: false,
+        speed: 2000,
+        slidesPerView: 3,
+        loopAdditionalSlides: 1,
+      });
     });
   }
+  if (document.querySelector(".ui-tab-btn")) {
+    const btnGroup = document.querySelector(".ui-tab-btn");
+    const btn = btnGroup.querySelectorAll(".btn-tab");
+    const tabContainer = btnGroup.nextElementSibling;
+    const tabBoxs = tabContainer.querySelectorAll(".ui-tab-box");
+    btn.forEach(($el, idx) => {
+      $el.addEventListener("click", () => {
+        btn.forEach(($elSub, idxSub) => {
+          $elSub.classList.remove("active");
+        });
+        tabBoxs.forEach(($box) => {
+          $box.style.display = "none";
+        });
+        $el.classList.add("active");
+        tabBoxs[idx].style.display = "block";
+      });
+    });
+  }
+
+  if (document.querySelector(".nav-menu")) {
+    const navMenu = document.querySelector(".nav-menu");
+    const navbarToggle = document.getElementById("navbar-toggle");
+    const dropdownMenus = document.querySelectorAll(".dropdown-menu");
+
+    navbarToggle.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+      dropdownMenus.forEach((menu) => {
+        menu.classList.remove("active");
+        menu.previousElementSibling
+          .querySelector(".dropdown-icon")
+          .classList.remove("rotate-icon");
+        menu.previousElementSibling.classList.remove("active");
+      });
+    });
+
+    navMenu.addEventListener("click", function (e) {
+      const trigger = e.target.closest(".dropdown-toggle");
+      if (trigger) {
+        const dropdownMenu = trigger.nextElementSibling;
+        const isActive = dropdownMenu.classList.contains("active");
+        dropdownMenus.forEach((menu) => {
+          menu.classList.remove("active");
+          menu.previousElementSibling
+            .querySelector(".dropdown-icon")
+            .classList.remove("rotate-icon");
+          menu.previousElementSibling.classList.remove("active");
+        });
+        if (!isActive) {
+          dropdownMenu.classList.add("active");
+          trigger.querySelector(".dropdown-icon").classList.add("rotate-icon");
+          trigger.classList.add("active");
+        }
+      }
+    });
+  }
+
+  // 팝업 열기 함수
+  function openPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    if (popup) {
+      popup.classList.add("show");
+    }
+  }
+
+  const privacyPolicyButton = document.getElementById("privaty_open");
+  if (privacyPolicyButton) {
+    privacyPolicyButton.addEventListener("click", function () {
+      openPopup("privaty_info");
+    });
+  }
+
+  const emailPolicyButton = document.getElementById("email_open");
+  if (privacyPolicyButton) {
+    emailPolicyButton.addEventListener("click", function () {
+      openPopup("email_info");
+    });
+  }
+
+  const refundPolicyButton = document.getElementById("refund_open");
+  if (privacyPolicyButton) {
+    refundPolicyButton.addEventListener("click", function () {
+      openPopup("refund_info");
+    });
+  }
+
+  document.querySelectorAll(".close-btn").forEach((button) => {
+    button.addEventListener("click", function () {
+      const popup = this.closest(".popup");
+      if (popup) {
+        popup.classList.remove("show");
+      }
+    });
+  });
 });
 
 // Resize for Public Common
