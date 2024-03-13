@@ -232,6 +232,7 @@ window.addEventListener("load", function () {
             this.closest(".review-card").querySelector(".review-content");
 
           const isExpanded = reviewContent.classList.contains("expanded");
+          const moreBtn = document.querySelector(".more-btn");
 
           if (isExpanded) {
             reviewContent.classList.remove("expanded");
@@ -240,6 +241,7 @@ window.addEventListener("load", function () {
             reviewContent.style.display = "-webkit-box";
             reviewContent.style.webkitLineClamp = "3";
             reviewContent.style.webkitBoxOrient = "vertical";
+            moreBtn.innerText = "+ more";
           } else {
             reviewContent.classList.add("expanded");
             reviewContent.style.overflow = "visible";
@@ -247,6 +249,7 @@ window.addEventListener("load", function () {
             reviewContent.style.display = "block";
             reviewContent.style.webkitLineClamp = "unset";
             reviewContent.style.webkitBoxOrient = "unset";
+            moreBtn.innerText = "- more";
           }
         });
       });
