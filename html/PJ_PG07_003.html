@@ -59,19 +59,19 @@
         <div class="header-bt">
           <a href="#none">
             <img src="../assets/images/logo.png" alt="site_logo" />
-            <div class="navbar" id="navbar-toggle">
-              <img src="../assets/images/navbar.png" alt="navbutton" />
-            </div>
           </a>
+          <button type="button" class="navbar" id="navbar-toggle">
+            <img src="../assets/images/navbar.png" alt="navbutton" />
+          </button>
         </div>
         <!-- 20240312 네비 드롭다운 메뉴 & 스크립트  -->
         <div class="nav-menu">
           <ul class="menu-list">
             <li>
-              <span class="dropdown-toggle">
+              <button type="button" class="dropdown-toggle">
                 교육원소개
                 <i class="dropdown-icon"></i>
-              </span>
+              </button>
               <ul class="dropdown-menu">
                 <li><a href="#none">브랜드 소개</a></li>
                 <li><a href="#none">강사진 소개</a></li>
@@ -79,20 +79,20 @@
               </ul>
             </li>
             <li>
-              <span class="dropdown-toggle">
+              <button type="button" class="dropdown-toggle">
                 자소서 전문과정
                 <i class="dropdown-icon"></i>
-              </span>
+              </button>
               <ul class="dropdown-menu">
                 <li><a href="#none">자기소개서 첨삭</a></li>
                 <li><a class="bt-none" href="#none">자기소개서 올인원</a></li>
               </ul>
             </li>
             <li>
-              <span class="dropdown-toggle">
+              <button type="button" class="dropdown-toggle">
                 면접 전문과정
                 <i class="dropdown-icon"></i>
-              </span>
+              </button>
               <ul class="dropdown-menu">
                 <li><a href="#none">대기업 1:1 면접</a></li>
                 <li><a href="#none">공기업 1:1 면접</a></li>
@@ -102,10 +102,10 @@
               </ul>
             </li>
             <li>
-              <span class="dropdown-toggle">
+              <button type="button" class="dropdown-toggle">
                 외부/단체교육
                 <i class="dropdown-icon"></i>
-              </span>
+              </button>
               <ul class="dropdown-menu">
                 <li><a href="#none">학교강연</a></li>
                 <li><a href="#none">기업강연</a></li>
@@ -113,10 +113,10 @@
               </ul>
             </li>
             <li>
-              <span class="dropdown-toggle">
+              <button type="button" class="dropdown-toggle">
                 커뮤니티
                 <i class="dropdown-icon"></i>
-              </span>
+              </button>
               <ul class="dropdown-menu">
                 <li><a href="#none">고객센터</a></li>
                 <li><a href="#none">자주하는질문</a></li>
@@ -125,10 +125,10 @@
               </ul>
             </li>
             <li>
-              <span class="dropdown-toggle">
+              <button type="button" class="dropdown-toggle">
                 <b>상담신청</b>
                 <i class="dropdown-icon"></i>
-              </span>
+              </button>
               <ul class="dropdown-menu">
                 <li><a class="bt-none" href="#none">빠른상담신청</a></li>
               </ul>
@@ -217,10 +217,73 @@
                   ></textarea>
                 </div>
                 <span class="line"></span>
+                <!-- 20240312 : 약관 내용 추가 -->
                 <div class="agree">
                   <span>개인정보 수집 / 이용동의</span>
-                  <div class="agree-content"></div>
+                  <div class="agree-content">
+                    [개인정보 수집 / 이용동의]
+                    <br />
+
+                    1. 개인정보의 수집 목적
+                    <br />
+                    - 회원 이름, 회원 연락처, 이메일, 학력, 거주지 등 맞춤
+                    서비스 제공을 위한 각종 고지 및 통지 목적으로 개인정보를
+                    처리합니다.
+                    <br />
+                    <br />
+
+                    2. 수집하는 개인정보의 항목
+                    <br />
+                    - 필수 : 이름(성함), 연락처, 이메일
+                    <br />
+                    - 선택 : 희망교육, 희망분야, 코칭방식, 문의내용
+                    <br />
+                    ※ 인터넷 서비스 이용과정에서 아래 개인정보 항목이 자동으로
+                    생성되어 수집될 수 있습니다.
+                    <br />
+                    ( IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록 등 )
+                    <br />
+                    <br />
+
+                    3. 보유 이용기간
+                    <br />
+                    - 회원 수료 및 환불 시
+                    <br />
+                    - 재화/서비스 공급 완료 및 요금 결제/정산 완료 시
+                    <br />
+                    - 다만, 다음의 사유에 해당하는 경우에는 해당 기간 종료
+                    시까지
+                    <br />
+                    ① 관계 법령 위반에 따른 수사/조사 등이 진행 중인 경우에는
+                    해당 수사/조사 종료 시까지
+                    <br />
+                    ② 「전자상거래 등에서의 소비자 보호에 관한 법률」 에 따른
+                    표시/광고, 계약 내용 및 이행 등 거래에 관한 기록
+                    <br />
+                    - 표시/광고에 관한 기록 : 6개월
+                    <br />
+                    - 계약 또는 청약철회, 대금결제, 재화 등의 공급기록 : 5년
+                    <br />
+                    - 소비자 불만 또는 분쟁처리에 관한 기록 : 3년
+                    <br />
+                    ③ 「통신비밀보호법」 에 따른 통신 사실 확인자료 보관
+                    <br />
+                    - 가입자 전기통신일시, 개시/종료시간, 상대방 가입자번호,
+                    사용도수, 발신기지국 위치추적자료 : 1년
+                    <br />
+                    - 컴퓨터통신, 인터넷 로그기록 자료, 접속지 추적자료 : 3개월
+                    <br />
+                    <br />
+
+                    4. 개인정보 제공 동의 거부 권리 및 동의 거부에 따른 불이익
+                    <br />
+                    귀하는 개인 정보 제공 동의를 거부 할 권리가 있으며, 거절하신
+                    경우에는 서비스의 제공이 제한 될 수 있습니다. 위
+                    보유기간에도 불구하고 계속 보유하여야 할 필요가 있을
+                    경우에는 귀하의 동의를 받습니다.
+                  </div>
                 </div>
+                <!-- //20240312 : 약관 내용 추가 -->
               </div>
               <div class="checkbox">
                 <input type="checkbox" id="agree_checkbox" />
@@ -241,9 +304,15 @@
           <!-- 20240312 푸터 팝업 & 스크립트 -->
           <div class="footer-top">
             <ul>
-              <li id="privaty_open"><b>개인정보처리방침</b></li>
-              <li id="email_open">이메일무단수집거부</li>
-              <li id="refund_open">환불규정안내</li>
+              <li class="ui-popup-open" data-popup="privaty_info">
+                <b>개인정보처리방침</b>
+              </li>
+              <li class="ui-popup-open" data-popup="email_info">
+                이메일무단수집거부
+              </li>
+              <li class="ui-popup-open" data-popup="refund_info">
+                환불규정안내
+              </li>
             </ul>
           </div>
           <!-- //20240312 푸터 팝업 & 스크립트  -->
@@ -503,6 +572,45 @@
               <br />
               교습비 반환을 희망하실 경우 최소 하루 전에는 담당자에게
               말씀해주시길 바랍니다.
+            </div>
+            <div class="close-btn">확인</div>
+          </div>
+        </div>
+        <div id="marketing_info" class="popup">
+          <div class="popup-wrap">
+            <h2>마켓팅 및 광고 활용에 대한 활동동의</h2>
+            <div class="desc">
+              1. 수집하는 개인정보의 항목은 빠른 학습상담 신청을 위해 아래와
+              같은 개인정보를 수집하고 있습니다.
+              <br />
+              <br />
+              - 수집항목 : 이름, 연락처, 상담내용, 관심분야, 상담내용
+              <br />
+              - 개인정보 수집방법 : 홈페이지 (문의하기)
+              <br />
+              <br />
+              2. 개인정보의 수집 및 이용목적회사는 수집한 개인정보를 다음의
+              목적을 위해 활용합니다.
+              <br />
+              <br />
+              - 회원 관리 : 회원제 서비스 이용에 따른 본인확인, 개인 식별, 가입
+              의사 확인, 불만처리 등 민원처리, 고지사항 전달
+              <br />
+              - 마케팅 및 광고에 활용 : 신규 서비스 (제품) 개발 및 특화, 이벤트
+              등 광고성 정보 전달
+              <br />
+              <br />
+              3. 개인정보의 보유 및 이용기간 : 2년
+              <br />
+              <br />
+              - 회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당
+              정보를 지체 없이 파기합니다.
+              <br />
+              <br />
+              ⦁ 귀하께서는 개인정보 제공 및 활용에 거부할 권리가 있습니다
+              <br />
+              ⦁ 거부에 따른 불이익 : 위 제공사항은 상담에 반드시 필요한 사항으로
+              거부하실 경우 상담이 불가능함을 알려드립니다
             </div>
             <div class="close-btn">확인</div>
           </div>

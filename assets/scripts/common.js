@@ -130,75 +130,146 @@ window.addEventListener("load", function () {
     const navbarToggle = document.getElementById("navbar-toggle");
     const dropdownMenus = document.querySelectorAll(".dropdown-menu");
 
+    navMenu.style.display = "none";
+
     navbarToggle.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-      dropdownMenus.forEach((menu) => {
-        menu.classList.remove("active");
-        menu.previousElementSibling
-          .querySelector(".dropdown-icon")
-          .classList.remove("rotate-icon");
-        menu.previousElementSibling.classList.remove("active");
-      });
+      if (navMenu.style.display === "none") {
+        navMenu.style.display = "block";
+        setTimeout(() => {
+          navMenu.classList.add("active");
+        }, 0);
+      } else {
+        navMenu.classList.remove("active");
+        setTimeout(() => {
+          navMenu.style.display = "none";
+        }, 200);
+      }
     });
 
     navMenu.addEventListener("click", function (e) {
       const trigger = e.target.closest(".dropdown-toggle");
-      if (trigger) {
-        const dropdownMenu = trigger.nextElementSibling;
-        const isActive = dropdownMenu.classList.contains("active");
-        dropdownMenus.forEach((menu) => {
+      if (!trigger) return;
+
+      const dropdownMenu = trigger.nextElementSibling;
+      const isActive = dropdownMenu.classList.contains("active");
+
+      // 이벤트 전파 방지
+      e.stopPropagation();
+
+      dropdownMenus.forEach((menu) => {
+        if (menu !== dropdownMenu) {
           menu.classList.remove("active");
+          setTimeout(() => {
+            menu.style.display = "none";
+          }, 200);
           menu.previousElementSibling
             .querySelector(".dropdown-icon")
             .classList.remove("rotate-icon");
           menu.previousElementSibling.classList.remove("active");
-        });
-        if (!isActive) {
-          dropdownMenu.classList.add("active");
-          trigger.querySelector(".dropdown-icon").classList.add("rotate-icon");
-          trigger.classList.add("active");
         }
+      });
+
+      if (!isActive) {
+        dropdownMenu.style.display = "block";
+        setTimeout(() => {
+          dropdownMenu.classList.add("active");
+        }, 0);
+        trigger.querySelector(".dropdown-icon").classList.add("rotate-icon");
+        trigger.classList.add("active");
+      } else {
+        dropdownMenu.classList.remove("active");
+        setTimeout(() => {
+          dropdownMenu.style.display = "none";
+        }, 200);
+        trigger.querySelector(".dropdown-icon").classList.remove("rotate-icon");
+        trigger.classList.remove("active");
       }
     });
   }
 
-  // 팝업 열기 함수
+  // footer 팝업
+  function closeAllPopups() {
+    document.querySelectorAll(".popup").forEach((popup) => {
+      popup.classList.remove("show");
+    });
+  }
+
   function openPopup(popupId) {
+    closeAllPopups();
     const popup = document.getElementById(popupId);
     if (popup) {
       popup.classList.add("show");
     }
   }
 
-  const privacyPolicyButton = document.getElementById("privaty_open");
-  if (privacyPolicyButton) {
-    privacyPolicyButton.addEventListener("click", function () {
-      openPopup("privaty_info");
+  if (document.querySelectorAll(".ui-popup-open")) {
+    const openBtn = document.querySelectorAll(".ui-popup-open");
+    openBtn.forEach(($el, idx) => {
+      const target = $el.dataset.popup;
+
+      $el.addEventListener("click", () => {
+        openPopup(target);
+      });
+    });
+    document.querySelectorAll(".close-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        const popup = this.closest(".popup");
+        if (popup) {
+          popup.classList.remove("show");
+        }
+      });
     });
   }
 
-  const emailPolicyButton = document.getElementById("email_open");
-  if (privacyPolicyButton) {
-    emailPolicyButton.addEventListener("click", function () {
-      openPopup("email_info");
-    });
+  // footer 팝업 끝
+
+  if (document.querySelector(".review-more .more-btn")) {
+    document
+      .querySelectorAll(".review-more .more-btn")
+      .forEach(function (moreBtn) {
+        moreBtn.addEventListener("click", function () {
+          const reviewContent =
+            this.closest(".review-card").querySelector(".review-content");
+
+          const isExpanded = reviewContent.classList.contains("expanded");
+
+          if (isExpanded) {
+            reviewContent.classList.remove("expanded");
+            reviewContent.style.overflow = "hidden";
+            reviewContent.style.textOverflow = "ellipsis";
+            reviewContent.style.display = "-webkit-box";
+            reviewContent.style.webkitLineClamp = "3";
+            reviewContent.style.webkitBoxOrient = "vertical";
+          } else {
+            reviewContent.classList.add("expanded");
+            reviewContent.style.overflow = "visible";
+            reviewContent.style.textOverflow = "clip";
+            reviewContent.style.display = "block";
+            reviewContent.style.webkitLineClamp = "unset";
+            reviewContent.style.webkitBoxOrient = "unset";
+          }
+        });
+      });
   }
 
-  const refundPolicyButton = document.getElementById("refund_open");
-  if (privacyPolicyButton) {
-    refundPolicyButton.addEventListener("click", function () {
-      openPopup("refund_info");
+  if (document.querySelector(".question-list .que")) {
+    document.querySelectorAll(".que").forEach(function (que) {
+      que.addEventListener("click", function () {
+        const ans = this.nextElementSibling;
+        if (ans.classList.contains("active")) {
+          ans.classList.remove("active");
+          setTimeout(() => {
+            ans.style.visibility = "hidden";
+          }, 300);
+        } else {
+          ans.style.visibility = "visible";
+          setTimeout(() => {
+            ans.classList.add("active");
+          }, 10);
+        }
+      });
     });
   }
-
-  document.querySelectorAll(".close-btn").forEach((button) => {
-    button.addEventListener("click", function () {
-      const popup = this.closest(".popup");
-      if (popup) {
-        popup.classList.remove("show");
-      }
-    });
-  });
 });
 
 // Resize for Public Common

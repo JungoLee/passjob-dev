@@ -17,7 +17,6 @@
     <script src="../assets/scripts/lib/swiper-bundle.min.js"></script>
     <script src="../assets/scripts/common.js"></script>
   </head>
-
   <body>
     <div id="wrap">
       <!-- s: header include-->
@@ -140,269 +139,437 @@
       <!-- //20240312 -->
       <!-- e: header include-->
 
-      <div class="pageClassMain PJ_PG04_001" id="container">
+      <div
+        class="pageClassMain PJ_PG15_001 mypage-public-container"
+        id="container"
+      >
         <div id="content" role="main">
-          <section class="edu-section">
-            <div class="edu-top">
-              <h1>
-                <em>취업패스</em>
-                교육환경
-              </h1>
-              <p>Educational environment</p>
-              <span>
-                취업패스는 수강생 여러분이 편안하게 학습 할 수 있도록 아래와
-                같이 대면 및 비대면 수업을 선택하여 진행 할 수 있습니다.
-              </span>
+          <div class="join-title-wrapper">
+            <h2 class="title">마이페이지</h2>
+            <p class="sub-desc">
+              <strong>천세현</strong>
+              (csh529) 님 반갑습니다!
+            </p>
+          </div>
+
+          <div class="public-login-container">
+            <div class="tab-container ui-tab-btn">
+              <button class="btn-tab active" type="button">장바구니</button>
+              <button class="btn-tab" type="button">수강내역</button>
+              <button class="btn-tab" type="button">결제내역</button>
+              <button class="btn-tab" type="button">개인정보 수정</button>
             </div>
-            <div class="edu-info">
-              <h2>
-                <span>취업패스</span>
-                수업선택
-              </h2>
-              <p class="desc">대면수업과 비대면 수업 모두 진행합니다.</p>
-              <div class="edu-list">
-                <div class="list-wrap">
-                  <div class="lists">
-                    <h3>
-                      대면 수업
-                      <i>face-to-face</i>
-                    </h3>
-                    <span>
-                      취업패스 본점은 서울 시청역(도보 1분)에 위치해 있으며,
-                      제휴 업체의 공간을 활용하여 &lt;전국&gt; 대면수업 신청을
-                      받을 수 있습니다.
-                      <br />
-                      수업 장소는 수강생과 코치의 편의에 따라 협의하여 결정할 수
-                      있습니다.
-                    </span>
+
+            <div class="mypage-wrapper ui-tab-container">
+              <!-- 장바구니 -->
+              <div class="tab-box ui-tab-box">
+                <div class="mypage-collection">
+                  <div class="table-container">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>신청일</th>
+                          <th>지원기업</th>
+                          <th>직무</th>
+                          <th>문의과정</th>
+                          <th>비용</th>
+                          <th>담당자</th>
+                        </tr>
+                      </thead>
+                    </table>
                   </div>
-                  <div class="lists">
-                    <h3>
-                      비대면 수업
-                      <i>Non-face-to-face</i>
-                    </h3>
-                    <span class="bg-purple">
-                      코치님과 수강생은 Zoom 또는 Google Meet과 같은 비대면 화상
-                      회의 플랫폼을 사용하여 공유된 인터넷 주소로 접속하여
-                      수업을 진행합니다.
-                    </span>
+                  <div class="empty">
+                    <p>담당자를 통하여 수강과정을 문의해주시기 바랍니다.</p>
+                    <p>담당자 배정이 되지 않았다면</p>
+                    <p>
+                      <strong>1599-9553</strong>
+                      로 연락주시기 바랍니다!
+                    </p>
+                  </div>
+
+                  <p class="desc-title">환불규정</p>
+                  <p class="desc-sub">
+                    수강료 반환기준 (교육부 제 4조 제 2항 관련)
+                  </p>
+                  <div class="table-container type02">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>반환 사유</th>
+                          <th>
+                            반환 사유
+                            <br />
+                            발생 시점
+                          </th>
+                          <th>반환 금액</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td colspan="2" class="br-none">
+                            제 4조 제 2항
+                            <br />
+                            제 1호에 해당하는 경우
+                          </td>
+                          <td>과오납된 금액 전액</td>
+                        </tr>
+                        <tr>
+                          <td rowspan="5">
+                            제 4조 제 2항
+                            <br />
+                            제 2호부터
+                            <br />
+                            제 4호까지의
+                            <br />
+                            규정에
+                            <br />
+                            해당하는 경우
+                          </td>
+                          <td>
+                            수업 시작일
+                            <br />
+                            전일까지
+                          </td>
+                          <td>학습비 전액</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            수업 시작일부터
+                            <br />
+                            총 수업시간의
+                            <br />
+                            1/6 경과 전
+                          </td>
+                          <td>
+                            학습비의 6분의 5에
+                            <br />
+                            해당하는 금액
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            수업 시작일부터
+                            <br />
+                            총 수업시간의 1/6 이상
+                            <br />
+                            부터
+                            <br />
+                            1/3 미만까지의
+                            <br />
+                            기간동안
+                          </td>
+                          <td>
+                            학습비의 3분의 2에
+                            <br />
+                            해당하는 금액
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            총 수업시간의
+                            <br />
+                            1/3 이상부터
+                            <br />
+                            1/2 미만 까지의
+                            <br />
+                            기간 동안
+                          </td>
+                          <td>
+                            학습비의 2분의 1에
+                            <br />
+                            해당하는 금액
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            총 수업시간의
+                            <br />
+                            1/2 이상 경과
+                          </td>
+                          <td>반환하지 않음</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="lists-container">
+                    <p class="lists-unit">
+                      ※ 본 교육원 반환 기준 적용 : 2022년 01월 01일 부터 적용
+                    </p>
+                    <ul>
+                      <li>
+                        결제금액에서 공제액을 뺀 나머지 금액이 환불금액입니다.
+                      </li>
+                      <li>
+                        가상계좌 및 무통장으로 결제한 경우 500원의 수수료 (은행
+                        입금 수수료)가 공제 후 환불됩니다.
+                      </li>
+                      <li>
+                        모든 서류가 도착 이후, 평일 기준 5일 이내 환불, PG사를
+                        이용할 경우, 실제 환불은 PG사 정책에 따라 상이할 수
+                        있음.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="privacy-check-box type02">
+                    <label for="value04">
+                      <input id="value04" type="checkbox" />
+                      <span class="text">환불규정을 확인하였습니다.</span>
+                    </label>
+                  </div>
+
+                  <p class="desc-title">결제수단 선택</p>
+                  <div class="choose-payment">
+                    <div class="title">결제수단 선택</div>
+                    <div class="flex-box">
+                      <div class="left">
+                        <span class="require">*</span>
+                        결제수단
+                      </div>
+                      <div class="right">
+                        <div class="privacy-check-box type03">
+                          <label for="value01">
+                            <input id="value01" type="checkbox" />
+                            <span class="text">신용카드</span>
+                          </label>
+                        </div>
+                        <div class="privacy-check-box type03">
+                          <label for="value02">
+                            <input id="value02" type="checkbox" />
+                            <span class="text">가상계좌</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-groups flex-type">
+                    <a class="btn-default" href="#none">결제하기</a>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card-wrapper">
-              <div class="card img01"></div>
-              <div class="card img02"></div>
-              <div class="card img03"></div>
-              <div class="card img04"></div>
-              <div class="desc">
-                <span>※</span>
-                <span>
-                  대면 수업 장소는 학생과 코치님의 편의에 맞춰 지역을 조정 할 수
-                  있습니다.
-                </span>
-              </div>
-            </div>
-          </section>
-          <section class="direction-section">
-            <div class="direction-top">
-              <h1>
-                <em>취업패스</em>
-                찾아오시는 길
-              </h1>
-              <span>주소 : 서울특별시 중구 서소문로 116 중원빌딩 15F</span>
-            </div>
-            <div class="map">
-              <img src="../assets/images/map.png" alt="찾아오는길지도" />
-            </div>
-            <div class="transport-info">
-              <h2>대중교통 이용 시</h2>
-              <div class="transports">
-                <ul>
-                  <li>버스</li>
-                </ul>
-                <ul>
-                  <li>(일반버스) 111</li>
-                  <li>(간선버스) 101, 103, 140</li>
-                  <li>(지선버스) 7212</li>
-                  <li>(좌석버스) 9301</li>
-                  <li>(마을버스) 종로12</li>
-                </ul>
-              </div>
-              <div class="transports">
-                <ul>
-                  <li>지하철</li>
-                </ul>
-                <ul>
-                  <li>(3호선, 5호선) 종로3가역 9번출구</li>
-                  <li>(1호선) 종로3가역 10번출구</li>
-                </ul>
-              </div>
-            </div>
-            <div class="transport-info02">
-              <h2></h2>
-            </div>
-          </section>
-          <section class="consulting-section">
-            <div class="consulting-top">
-              <h1>
-                <em>취업패스</em>
-                맞춤상담신청
-              </h1>
-              <p class="desc">
-                지원자 분의 [현재 상황] 과 [목표 기업 및 희망 직무] 등 아래
-                내용에 대해 자세히 입력해 주시면 전문가가 정확한 코칭을
-                준비해드리겠습니다.
-              </p>
-            </div>
-            <div class="listwrap">
-              <div class="list">
-                <h3>
-                  <i>■</i>
-                  희망 교육
-                  <em>(복수선택가능)</em>
-                </h3>
-                <div class="lists">
-                  <input type="checkbox" id="value01" />
-                  <label for="value01">자소서첨삭</label>
-                  <input type="checkbox" id="value02" />
-                  <label for="value02">자소서코칭</label>
-                  <input type="checkbox" id="value03" />
-                  <label for="value03">일대일면접코칭</label>
-                  <input type="checkbox" id="value04" />
-                  <label for="value04">기업&직무설정</label>
-                  <input type="checkbox" id="value05" />
-                  <label for="value05">(시즌)그룹코칭</label>
-                </div>
-                <!-- 20240312 : 희망 분야 & 코칭 방식 복수선택 수정 -->
-                <h3>
-                  <i>■</i>
-                  희망 분야
-                  <em>(복수선택가능)</em>
-                </h3>
-                <div class="lists">
-                  <input type="checkbox" id="value06" />
-                  <label class="active" for="value06">공기업</label>
-                  <input type="checkbox" id="value07" />
-                  <label for="value07">금융권</label>
-                  <input type="checkbox" id="value08" />
-                  <label for="value08">대기업</label>
-                  <input type="checkbox" id="value09" />
-                  <label for="value09">공무원</label>
-                  <input type="checkbox" id="value10" />
-                  <label for="value10">대학원</label>
-                </div>
-                <h3>
-                  <i>■</i>
-                  코칭 방식 선택
-                </h3>
-                <div class="lists">
-                  <input type="radio" id="value11" name="radioGroup01" />
-                  <label for="value11">대면코칭</label>
-                  <input type="radio" id="value12" name="radioGroup01" />
-                  <label for="value12">비대면코칭</label>
-                  <input type="radio" id="value13" name="radioGroup01" />
-                  <label for="value13">대면+비대면코칭</label>
-                </div>
-                <!-- 20240312 : 희망 분야 & 코칭 방식 복수선택 수정 -->
-                <h3>
-                  <i>■</i>
-                  성함
-                  <span>*</span>
-                </h3>
-                <div class="lists2">
-                  <input class="name" placeholder="성함" />
-                </div>
-                <h3>
-                  <i>■</i>
-                  연락처
-                  <span>*</span>
-                </h3>
-                <div class="lists2">
-                  <input class="phone" placeholder="연락처" />
-                </div>
-                <h3>
-                  <i>■</i>
-                  문의내용
-                </h3>
-                <div class="lists2">
-                  <textarea
-                    placeholder="(지원하신 기업명 + 희망 직무를 입력하고 추가 문의사항을 남겨주세요.)"
-                  ></textarea>
-                  <span class="line"></span>
-                </div>
-                <!-- 20240312 : 약관 내용 추가 -->
-                <div class="agree">
-                  [개인정보 수집 / 이용동의]
-                  <br />
+              <!-- //장바구니 -->
 
-                  1. 개인정보의 수집 목적
-                  <br />
-                  - 회원 이름, 회원 연락처, 이메일, 학력, 거주지 등 맞춤 서비스
-                  제공을 위한 각종 고지 및 통지 목적으로 개인정보를 처리합니다.
-                  <br />
-                  <br />
-
-                  2. 수집하는 개인정보의 항목
-                  <br />
-                  - 필수 : 이름(성함), 연락처, 이메일
-                  <br />
-                  - 선택 : 희망교육, 희망분야, 코칭방식, 문의내용
-                  <br />
-                  ※ 인터넷 서비스 이용과정에서 아래 개인정보 항목이 자동으로
-                  생성되어 수집될 수 있습니다.
-                  <br />
-                  ( IP주소, 쿠키, MAC주소, 서비스 이용기록, 방문기록 등 )
-                  <br />
-                  <br />
-
-                  3. 보유 이용기간
-                  <br />
-                  - 회원 수료 및 환불 시
-                  <br />
-                  - 재화/서비스 공급 완료 및 요금 결제/정산 완료 시
-                  <br />
-                  - 다만, 다음의 사유에 해당하는 경우에는 해당 기간 종료 시까지
-                  <br />
-                  ① 관계 법령 위반에 따른 수사/조사 등이 진행 중인 경우에는 해당
-                  수사/조사 종료 시까지
-                  <br />
-                  ② 「전자상거래 등에서의 소비자 보호에 관한 법률」 에 따른
-                  표시/광고, 계약 내용 및 이행 등 거래에 관한 기록
-                  <br />
-                  - 표시/광고에 관한 기록 : 6개월
-                  <br />
-                  - 계약 또는 청약철회, 대금결제, 재화 등의 공급기록 : 5년
-                  <br />
-                  - 소비자 불만 또는 분쟁처리에 관한 기록 : 3년
-                  <br />
-                  ③ 「통신비밀보호법」 에 따른 통신 사실 확인자료 보관
-                  <br />
-                  - 가입자 전기통신일시, 개시/종료시간, 상대방 가입자번호,
-                  사용도수, 발신기지국 위치추적자료 : 1년
-                  <br />
-                  - 컴퓨터통신, 인터넷 로그기록 자료, 접속지 추적자료 : 3개월
-                  <br />
-                  <br />
-
-                  4. 개인정보 제공 동의 거부 권리 및 동의 거부에 따른 불이익
-                  <br />
-                  귀하는 개인 정보 제공 동의를 거부 할 권리가 있으며, 거절하신
-                  경우에는 서비스의 제공이 제한 될 수 있습니다. 위 보유기간에도
-                  불구하고 계속 보유하여야 할 필요가 있을 경우에는 귀하의 동의를
-                  받습니다.
-                </div>
-                <!-- //20240312 : 약관 내용 추가 -->
-                <div class="checkbox">
-                  <input type="checkbox" id="value20" />
-                  <label for="value20">
-                    개인정보 수집 / 이용동의 내용에 동의합니다.
-                  </label>
+              <!-- 수강내역 -->
+              <div class="tab-box ui-tab-box" style="display: none">
+                <div class="class-lists-wrapper">
+                  <div class="table-container">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>순번</th>
+                          <th>과정명</th>
+                          <th>회차</th>
+                          <th>교육시간</th>
+                          <th>날짜</th>
+                          <th>대면/비대면</th>
+                          <th>강의장</th>
+                          <th>지정코치</th>
+                          <th>출석유무</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>1:1 면접코칭 6H</td>
+                          <td>1회차</td>
+                          <td>2시간</td>
+                          <td>
+                            24-02-01
+                            <br />
+                            16:00
+                          </td>
+                          <td>대면</td>
+                          <td>시청본점</td>
+                          <td>천세현</td>
+                          <td>출석</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>1:1 면접코칭 6H</td>
+                          <td>1회차</td>
+                          <td>2시간</td>
+                          <td>
+                            24-02-01
+                            <br />
+                            16:00
+                          </td>
+                          <td>대면</td>
+                          <td>시청본점</td>
+                          <td>천세현</td>
+                          <td>출석</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="caution">
+                    ※ 이력서 / 자소서 / 사전과제(선택) 및 기타 수업 관련
+                    준비자료 등은 수업 최소 3시간 전 메일로 첨부 부탁드립니다.
+                    <br />
+                    (메일주소는 각 담당선생님을 통하여 별도로 확인해주세요.)
+                  </p>
+                  <p class="caution">
+                    ※ 수업도중 궁금한 점이나 문의사항이 있을 경우, 언제든지
+                    담당선생님 에게 연락주시기 바랍니다.
+                  </p>
                 </div>
               </div>
+              <!-- //수강내역 -->
+
+              <!-- 결제내역 -->
+              <div class="tab-box ui-tab-box" style="display: none">
+                <div class="payment-lists-wrapper">
+                  <div class="table-container">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>순번</th>
+                          <th>과정명</th>
+                          <th>수강료</th>
+                          <th>결제방법</th>
+                          <th>결제상태</th>
+                          <th>카드전표</th>
+                          <th>현금영수증</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>1:1 면접코칭 6H</td>
+                          <td>980,000</td>
+                          <td>카드결제</td>
+                          <td>결제완료</td>
+                          <td class="has-btn">
+                            <button class="btn-default" type="button">
+                              발급
+                            </button>
+                          </td>
+                          <td class="has-btn">
+                            <button class="btn-default disabled" type="button">
+                              발급
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>1:1 면접코칭 6H</td>
+                          <td>980,000</td>
+                          <td>카드결제</td>
+                          <td>결제완료</td>
+                          <td class="has-btn">
+                            <button class="btn-default disabled" type="button">
+                              발급
+                            </button>
+                          </td>
+                          <td class="has-btn">
+                            <button class="btn-default" type="button">
+                              발급
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="caution">
+                    ※ 카드결제일때는 카드전표 발급, 무통장입금시에는 현금영수증
+                    발급만 가능합니다.
+                  </p>
+                </div>
+              </div>
+              <!-- //결제내역 -->
+
+              <!-- 개인정보 수정 -->
+              <div class="tab-box ui-tab-box" style="display: none">
+                <div class="form-container">
+                  <div class="input-box-wrapper">
+                    <p class="label">
+                      아이디
+                      <span class="require">*</span>
+                    </p>
+                    <input
+                      class="input-box"
+                      readonly
+                      type="text"
+                      value="csh529"
+                      placeholder="아이디 입력하세요."
+                    />
+                  </div>
+                  <div class="input-box-wrapper">
+                    <p class="label">
+                      비밀번호
+                      <span class="require">*</span>
+                    </p>
+                    <input
+                      class="input-box"
+                      type="text"
+                      placeholder="비밀번호 변경을 원하실 경우 입력해 주세요."
+                    />
+                    <p class="validation-info">
+                      ※10~20자 이내의 영문, 숫자, 특수문자를 조합하여 입력해
+                      주세요.
+                    </p>
+                  </div>
+                  <div class="input-box-wrapper">
+                    <p class="label">
+                      비밀번호 확인
+                      <span class="require">*</span>
+                    </p>
+                    <input
+                      class="input-box"
+                      type="text"
+                      placeholder="비밀번호를 입력해주세요."
+                    />
+                    <p class="validation-info">
+                      ※10~20자 이내의 영문, 숫자, 특수문자를 조합하여 입력해
+                      주세요.
+                    </p>
+                  </div>
+
+                  <div class="input-box-wrapper">
+                    <p class="label">
+                      이름
+                      <span class="require">*</span>
+                    </p>
+                    <input
+                      class="input-box"
+                      readonly
+                      type="text"
+                      value="천세현"
+                      placeholder="이름 입력하세요."
+                    />
+                  </div>
+                  <div class="input-box-wrapper">
+                    <p class="label">
+                      연락처
+                      <span class="require">*</span>
+                    </p>
+                    <input
+                      class="input-box"
+                      type="text"
+                      value="010-1234-5678"
+                      placeholder="연락처 입력하세요."
+                    />
+                  </div>
+                  <div class="input-box-wrapper">
+                    <p class="label">
+                      E-mail
+                      <span class="require">*</span>
+                    </p>
+                    <input
+                      class="input-box"
+                      readonly
+                      type="text"
+                      value="abc1234@abc.efg"
+                      placeholder="이메일 입력하세요."
+                    />
+                  </div>
+                </div>
+                <div class="btn-groups flex-type">
+                  <a class="btn-default cancle" href="#none">탈퇴하기</a>
+                  <a class="btn-default" href="#none">수정하기</a>
+                </div>
+              </div>
+              <!-- //개인정보 수정 -->
             </div>
-            <button class="consulting-btn" type="button">상담신청</button>
-          </section>
+          </div>
         </div>
       </div>
 
